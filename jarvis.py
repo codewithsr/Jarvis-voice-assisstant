@@ -110,6 +110,21 @@ if __name__ == "__main__":
         except Exception as e:
             print(e)
             speak("Sorry!, but the email could not be sent")
+            
+     elif 'remember that' in query:
+            speak("what should i remember sir")
+            rememberMessage = takeCommand()
+            speak("you said me to remember"+rememberMessage)
+            remember = open('data.txt', 'w')
+            remember.write(rememberMessage)
+            remember.close()
+
+        elif 'do you remember anything' in query:
+            remember = open('data.txt', 'r')
+            speak("you said me to remember that" + remember.read())
+
+        elif 'sleep' in query:
+            sys.exit()   
 
     elif 'open camera roll' in query:
         codePath = "C:\\Users\\shubh\\Pictures\\Camera Roll"
