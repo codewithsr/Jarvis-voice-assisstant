@@ -1,10 +1,10 @@
-import pyttsx3
+import pyttsx3  #pyttsx3 is a text-to-speech conversion library in Python. Unlike alternative libraries, it works offline.
 import datetime
 import speech_recognition as sr
 import wikipedia
 import webbrowser
 import os
-import smtplib
+import smtplib #this module is used to send email
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
